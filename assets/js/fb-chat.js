@@ -16,3 +16,10 @@
     js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));
+
+
+  const openFbChat = () => {
+    if(FB && FB.CustomerChat){
+      FB.CustomerChat.show(true);
+    }
+  } 
