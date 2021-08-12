@@ -98,22 +98,6 @@
   }
 
   /**
-   * Back to top button
-   */
-  let backtotop = select('.back-to-top')
-  if (backtotop) {
-    const toggleBacktotop = () => {
-      if (window.scrollY > 100) {
-        backtotop.classList.add('active')
-      } else {
-        backtotop.classList.remove('active')
-      }
-    }
-    window.addEventListener('load', toggleBacktotop)
-    onscroll(document, toggleBacktotop)
-  }
-
-  /**
    * Mobile nav toggle
    */
   on('click', '.mobile-nav-toggle', function(e) {
@@ -149,6 +133,15 @@
       scrollto(this.hash)
     }
   }, true)
+
+  /**
+   * Open Facebook Chat Messenger
+   */
+  on('click', '.appointment-btn', function(e) {
+    if(FB && FB.CustomerChat){
+      FB.CustomerChat.show(true);
+    }
+  })
 
   /**
    * Scroll with ofset on page load with hash links in the url

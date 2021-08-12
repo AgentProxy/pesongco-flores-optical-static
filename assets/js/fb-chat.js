@@ -17,8 +17,3 @@
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));
 
-  on('click', '#appointment-btn', function(e) {
-    if(FB && FB.CustomerChat){
-      FB.CustomerChat.show(true);
-    }
-  })
